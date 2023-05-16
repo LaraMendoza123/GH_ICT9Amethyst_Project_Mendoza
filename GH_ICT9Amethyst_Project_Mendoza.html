@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length Conversion Calculator</title>
+</head>
+<body>
+	<h1>UNIT converter (FOR ALL)</h1>
+	<label for="input">Enter length in Millimeter: </label>
+	<input type="text" id="input"><br><br>
+
+	<button onclick="convert()">Convert</button><br><br>
+
+	<p>CentiMeteRs: <span id="centimeter"></span></p>
+	<p>MeTeR: <span id="meter"></span></p>
+	<p>KiLoMetErs: <span id="kilometer"></span></p>
+
+	<script>
+		function convert() {
+			var input = document.getElementById("input").value;
+
+			var centimeter = input / 10;
+			document.getElementById("centimeter").innerHTML = centimeter;
+
+			var meter = input / 1000;
+			document.getElementById("meter").innerHTML = meter;
+
+			var kilometer = input / 1000000;
+			document.getElementById("kilometer").innerHTML = kilometer;
+		}
+	</script>
+</body>
+</html>
